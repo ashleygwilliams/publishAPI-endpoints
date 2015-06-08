@@ -14,6 +14,9 @@ const instanceProps = {
 const classProps = {
   typeName: 'projects',
   filters: {
+    user_name: function(qb, value) {
+      return qb.whereIn('user_name', value);
+    },
     title: function (qb, value) {
       return qb.whereIn('title', value);
     }
