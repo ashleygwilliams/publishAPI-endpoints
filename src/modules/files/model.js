@@ -10,8 +10,8 @@ const instanceProps = {
 const classProps = {
   typeName: 'files',
   filters: {
-    project_id: function (qb, value) {
-      return qb.whereIn('project_id', value);
+    project_title: function (qb, value) {
+      return qb.whereIn('project_title', value);
     },
     type: function (qb, value) {
       return qb.whereIn('type', value);

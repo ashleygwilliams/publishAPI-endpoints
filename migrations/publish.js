@@ -6,13 +6,14 @@ exports.up = function (knex) {
     })
     .createTable('projects', function (t) {
       t.increments('id');
-      t.integer('user_id').notNullable().references('name').inTable('users');
+      t.text('user_name').notNullable().references('name').inTable('users');
       t.text('title').notNullable();
     })
     .createTable('files', function (t) {
       t.increments('id');
-      t.integer('project_id').notNullable().references('title').inTable('projects');
+      t.text('project_title').notNullable().references('title').inTable('projects');
       t.text('path').notNullable();
+      t.text('type');
     })
 }; 
 
