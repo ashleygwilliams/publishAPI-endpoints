@@ -7,12 +7,12 @@ exports.up = function (knex) {
     .createTable('projects', function (t) {
       t.increments('id');
       t.text('user_name').notNullable().references('name').inTable('users');
-      t.text('title').notNullable();
+      t.text('title').unique().notNullable();
     })
     .createTable('files', function (t) {
       t.increments('id');
       t.text('project_title').notNullable().references('title').inTable('projects');
-      t.text('path').notNullable();
+      t.text('path').unique().notNullable();
       t.text('type');
     })
 }; 
