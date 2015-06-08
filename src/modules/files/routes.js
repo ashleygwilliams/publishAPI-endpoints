@@ -6,22 +6,22 @@ exports.map = {
     '/': controller.create({
       schema: schema
     }),
-    '/:id/relationships/:relation': controller.createRelation()
+    '/:path/relationships/:relation': controller.createRelation()
   },
   get: {
     '/': controller.read(),
-    '/:id': controller.read(),
-    '/:id/:related': controller.readRelated(),
-    '/:id/relationships/:relation': controller.readRelation()
+    '/:path': controller.read(),
+    '/:path/:related': controller.readRelated(),
+    '/:path/relationships/:relation': controller.readRelation()
   },
   patch: {
     '/:id': controller.update({
       schema: schema
     }),
-    '/:id/relationships/:relation': controller.updateRelation()
+    '/:path/relationships/:relation': controller.updateRelation()
   },
   delete: {
-    '/:id': controller.destroy(),
-    '/:id/relationships/:relation': controller.destroyRelation()
+    '/:path': controller.destroy(),
+    '/:path/relationships/:relation': controller.destroyRelation()
   }
 };

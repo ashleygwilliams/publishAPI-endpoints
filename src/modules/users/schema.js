@@ -4,7 +4,7 @@ module.exports = {
       id: {
         type: 'integer'
       },
-      username: {
+      name: {
         type: 'string'
       }
     }
