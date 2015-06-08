@@ -22,8 +22,8 @@ relations, and filters.
 // http://localhost:8080/v1
 
 {
-  "files": "/v1/files?include={project}&filter[{project_id,type,path}]",
-  "projects": "/v1/projects?include={user,files}&filter[{user_id,title}]",
+  "files": "/v1/files?include={project}&filter[{project_title,type,path}]",
+  "projects": "/v1/projects?include={user,files}&filter[{user_name,title}]",
   "users": "/v1/users?include={projects}&filter[{name}]"
 }
 ```
